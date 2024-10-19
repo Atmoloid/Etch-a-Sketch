@@ -1,0 +1,6 @@
+.grid-square{ 
+    display: flex;
+    -ms-flex-align: center;
+    border-radius: 5%;
+    color: black;
+};
