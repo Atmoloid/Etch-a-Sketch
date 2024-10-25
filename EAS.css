@@ -8,9 +8,9 @@
     width: 500px;
     height: 500px;
     display: grid;
-    background-color: rgb(255, 0, 0);
+    border: 1px solid black;
 };
-.container-a{
+.top{
     display: flex;
     justify-content: center;
     align-items: center;

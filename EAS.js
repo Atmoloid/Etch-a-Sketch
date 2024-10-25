@@ -1,9 +1,20 @@
-const container = document.querySelector('.container');
+document.addEventListener("DOMContentLoaded",function(){
+    createSquare(16);
+    
+})
 
-        for (let i = 0; i < 16; i++) {
-            for (let j = 0; j < 16; j++) {
-                const div = document.createElement('div');
-                div.classList.add('grid-square');
-                container.appendChild(div);
-            }
-        };
+        
+function createSquare(size){
+    let container = document.querySelector('.container');
+
+    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+    let amount = size * size;
+    for(let i = 0; i < amount; i++){
+        let div = document.createElement("div");
+        
+        container.insertAdjacentElement("beforeend",div);
+    }
+    
+}
