@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded",function(){
     createSquare(16);
-    
+    getSize();
+    let btn_popup = document.querySelector("#sizes");
+    btn_popup.addEventListener("click",function(){
+        let size = getSize();
+        createSquare(size);
+    })
 })
 
         
@@ -17,4 +22,16 @@ function createSquare(size){
         container.insertAdjacentElement("beforeend",div);
     }
     
+}
+function getSize(){
+    let imput = prompt("Give me a size between 0 and 100:");
+    if( imput == ""){
+        return  getSize()
+    }
+    else if(imput < 0 || imput > 100){
+        return getSize()
+    }
+    else{
+        return imput;
+    }
 }
