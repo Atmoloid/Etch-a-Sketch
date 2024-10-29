@@ -1,3 +1,4 @@
+let color = "black";
 document.addEventListener("DOMContentLoaded",function(){
     createSquare(16);
     getSize();
@@ -18,7 +19,7 @@ function createSquare(size){
     let amount = size * size;
     for(let i = 0; i < amount; i++){
         let div = document.createElement("div");
-        
+        div.addEventListener("mouseover",colorDiv);
         container.insertAdjacentElement("beforeend",div);
     }
     
@@ -35,3 +36,15 @@ function getSize(){
         return imput;
     }
 }
+
+function colorDiv() {
+  if (color === "random") {
+    this.style.backgroundColor = `hls(${Math.random() * 360}, 100% 50%)`
+  } else {
+    this.style.backgroundColor = "black";
+  }
+}
+
+function setColor(colorChoice) {
+  color = colorChoice;
+};
