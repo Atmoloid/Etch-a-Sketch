@@ -5,9 +5,12 @@
     border: 1px solid black;
 };
 .top{
+    position: absolute;
+    right: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 };
 
 .btn-container{ 
